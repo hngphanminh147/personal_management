@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.xsd">
+    <changeSet id="20220623000700-1" author="hngphanminh147">
+        <preConditions onError="MARK_RAN" onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="record"></tableExists>
+            </not>
+        </preConditions>
+        <createTable tableName="record">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="category_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="owner_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="amount" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="note" type="text">
+                <constraints nullable="true"/>
+            </column>
+            <column name="date" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="creator_email" type="varchar(64)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created_date" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+            <column name="updater_email" type="varchar(64)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="updated_date" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+            <column name="deleter_email" type="varchar(64)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="deleted_date" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+<!--    <changeSet id="20220623000700-2" author="hngphanminh147">-->
+<!--        <loadData file="liquibase/data/record.csv"-->
+<!--                  tableName="record"-->
+<!--                  schemaName="public"-->
+<!--                  relativeToChangelogFile="false"-->
+<!--                  encoding="UTF-8"-->
+<!--                  quotchar="'"-->
+<!--                  separator=","-->
+<!--        >-->
+<!--            <column header="id" name="id" type="numeric"/>-->
+<!--            <column header="title" name="email" type="varchar"/>-->
+<!--            <column header="owner_id" name="password" type="numeric"/>-->
+<!--            <column header="box" name="authorities" type="varchar"/>-->
+<!--            <column header="status" name="authorities" type="varchar"/>-->
+
+<!--            <column header="creator_email" name="creator_email" type="varchar"/>-->
+<!--            <column header="created_date" name="creator_email" type="timestamp"/>-->
+<!--            <column header="updater_email" name="updater_email" type="varchar"/>-->
+<!--            <column header="updated_date" name="updated_date" type="timestamp"/>-->
+<!--            <column header="deleter_email" name="deleter_email" type="varchar"/>-->
+<!--            <column header="deleted_date" name="deleted_date" type="timestamp"/>-->
+<!--            <column header="is_deleted" name="is_deleted" type="boolean"/>-->
+<!--        </loadData>-->
+<!--    </changeSet>-->
+
+</databaseChangeLog>
