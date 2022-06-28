@@ -49,28 +49,28 @@
         </createTable>
     </changeSet>
 
-<!--    <changeSet id="20220621013600-2" author="hngphanminh147">-->
-<!--        <loadData file="liquibase/data/user.csv"-->
-<!--                  tableName="user_info"-->
-<!--                  schemaName="public"-->
-<!--                  relativeToChangelogFile="false"-->
-<!--                  encoding="UTF-8"-->
-<!--                  quotchar="'"-->
-<!--                  separator=","-->
-<!--        >-->
-<!--            <column header="id" name="id" type="numeric"/>-->
-<!--            <column header="email" name="email" type="varchar"/>-->
-<!--            <column header="password" name="password" type="varchar"/>-->
-<!--            <column header="authorities" name="authorities" type="varchar"/>-->
+    <!--    <changeSet id="20220621013600-2" author="hngphanminh147">-->
+    <!--        <loadData file="liquibase/data/user.csv"-->
+    <!--                  tableName="user_info"-->
+    <!--                  schemaName="public"-->
+    <!--                  relativeToChangelogFile="false"-->
+    <!--                  encoding="UTF-8"-->
+    <!--                  quotchar="'"-->
+    <!--                  separator=","-->
+    <!--        >-->
+    <!--            <column header="id" name="id" type="numeric"/>-->
+    <!--            <column header="email" name="email" type="varchar"/>-->
+    <!--            <column header="password" name="password" type="varchar"/>-->
+    <!--            <column header="authorities" name="authorities" type="varchar"/>-->
 
-<!--            <column header="creator_email" name="creator_email" type="varchar"/>-->
-<!--            <column header="created_date" name="creator_email" type="timestamp"/>-->
-<!--            <column header="updater_email" name="updater_email" type="varchar"/>-->
-<!--            <column header="updated_date" name="updated_date" type="timestamp"/>-->
-<!--            <column header="deleter_email" name="deleter_email" type="varchar"/>-->
-<!--            <column header="deleted_date" name="deleted_date" type="timestamp"/>-->
-<!--            <column header="is_deleted" name="is_deleted" type="boolean"/>-->
-<!--        </loadData>-->
-<!--    </changeSet>-->
+    <!--            <column header="creator_email" name="creator_email" type="varchar"/>-->
+    <!--            <column header="created_date" name="creator_email" type="timestamp"/>-->
+    <!--            <column header="updater_email" name="updater_email" type="varchar"/>-->
+    <!--            <column header="updated_date" name="updated_date" type="timestamp"/>-->
+    <!--            <column header="deleter_email" name="deleter_email" type="varchar"/>-->
+    <!--            <column header="deleted_date" name="deleted_date" type="timestamp"/>-->
+    <!--            <column header="is_deleted" name="is_deleted" type="boolean"/>-->
+    <!--        </loadData>-->
+    <!--    </changeSet>-->
 
 </databaseChangeLog>
